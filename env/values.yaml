@@ -20,10 +20,16 @@ expose:
     domain: k8s.xiongyingqi.com
     exposer: Ingress
     http: "true"
+#jenkins:
+#  Servers:
+#    Global:
+#      EnvVars:
+#        TILLER_NAMESPACE: kube-system
+#  enabled: false
 jenkins:
   Servers:
     Global:
       EnvVars:
-        TILLER_NAMESPACE: kube-system
-  enabled: false
+        DOCKER_REGISTRY: "docker.io"
+  enabled: true
 prow: {}
